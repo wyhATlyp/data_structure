@@ -9,37 +9,66 @@ public class BinaryTree<T> {
 
     private Node<T> root;
     
-    public BinaryTree(T root) {
-    	this.root = new Node<T>(root);
+    public BinaryTree(Node<T> root) {
+    	this.root = root;
     }
 
-    public void addLeft(Node<T> node, T obj) {
+    public void addLeft(Node<T> node, Node<T> obj) {
     	if(node.left != null)
 			throw new RuntimeException("左子树已存在");
-    	node.left = new Node<T>(obj);
+    	node.left = obj;
     }
     
-    public void addRight(Node<T> node, T obj) {
+    public void addRight(Node<T> node, Node<T> obj) {
     	if(node.right != null)
     		throw new RuntimeException("右子树已存在");
-    	node.right = new Node<T>(obj);
+    	node.right = obj;
     }
-    
-    /**
-     * 后序遍历
-     */
-    public void backForeach(Consumer<T> consumer) {
-    	Node<T> current = root; 
-    	if(current.left != null) {
-    		current = current.left;
-    		backForeach(consumer);
-    	}
-    	if(current.right != null) {
-    		current = current.right;
-    		backForeach(consumer);
-    	}
-    	consumer.accept(this.root.obj);
-    }
+
+	/**
+	 * 前序根据ID查找
+	 */
+
+	/**
+	 * 前序遍历：父 -> 子
+	 */
+	public void frontForeach(Consumer<T> consumer, Node<T> current) {
+		if(current == null)
+			return;
+		consumer.accept(current.obj);
+		if(current.left != null)
+			frontForeach(consumer, current.left);
+		if(current.right != null)
+			frontForeach(consumer, current.right);
+	}
+
+	/**
+	 * 中序遍历：左 -> 父 -> 右
+	 */
+	public void infixForeach(Consumer<T> consumer, Node<T> current) {
+		if(current == null)
+			return;
+		if(current.left != null)
+			infixForeach(consumer, current.left);
+		consumer.accept(current.obj);
+		if(current.right != null)
+			infixForeach(consumer, current.right);
+	}
+
+	/**
+	 * 后序遍历：子 -> 父
+	 */
+	public void backForeach(Consumer<T> consumer, Node<T> current) {
+		if(current == null)
+			return;
+		if(current.left != null) {
+			backForeach(consumer, current.left);
+		}
+		if(current.right != null) {
+			backForeach(consumer, current.right);
+		}
+		consumer.accept(current.obj);
+	}
 
     public static class Node<T> {
 

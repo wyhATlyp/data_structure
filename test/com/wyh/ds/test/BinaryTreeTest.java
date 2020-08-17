@@ -1,4 +1,4 @@
-package com.wyh.ds.test.util;
+package com.wyh.ds.test;
 
 import com.wyh.ds.User;
 import com.wyh.ds.tree.BinaryTree;

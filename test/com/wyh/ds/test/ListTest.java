@@ -1,4 +1,4 @@
-package com.wyh.ds.test.util;
+package com.wyh.ds.test;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

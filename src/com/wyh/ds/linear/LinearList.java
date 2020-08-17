@@ -1,4 +1,4 @@
-package com.wyh.ds.logic.linear;
+package com.wyh.ds.linear;
 
 /**
  * <p>线性表</p>

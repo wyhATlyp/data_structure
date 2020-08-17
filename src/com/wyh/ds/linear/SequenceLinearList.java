@@ -1,8 +1,8 @@
-package com.wyh.ds.store;
+package com.wyh.ds.linear;
 
 import java.util.Arrays;
 
-import com.wyh.ds.logic.linear.LinearList;
+import com.wyh.ds.linear.LinearList;
 
 /**
  * <p>顺序表</p>

@@ -1,7 +1,7 @@
 package com.wyh.ds.test;
 
-import com.wyh.ds.logic.linear.LinearList;
-import com.wyh.ds.store.SequenceLinearList;
+import com.wyh.ds.linear.LinearList;
+import com.wyh.ds.linear.SequenceLinearList;
 
 public class SequenceLinearListTest {
 	

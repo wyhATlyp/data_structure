@@ -7,12 +7,6 @@ import java.util.function.Consumer;
  */
 public class BinaryTree<T> {
 
-    private Node<T> root;
-    
-    public BinaryTree(Node<T> root) {
-    	this.root = root;
-    }
-
     public void addLeft(Node<T> node, Node<T> obj) {
     	if(node.left != null)
 			throw new RuntimeException("左子树已存在");
@@ -24,10 +18,6 @@ public class BinaryTree<T> {
     		throw new RuntimeException("右子树已存在");
     	node.right = obj;
     }
-
-	/**
-	 * 前序根据ID查找
-	 */
 
 	/**
 	 * 前序遍历：父 -> 子

@@ -23,9 +23,9 @@ public class BinaryTreeTest {
 		User user6 = new User(6, "Smith", 20);
 
 
-		Node root = new Node(user1);
+		Node<User> root = new Node<User>(user1);
 		
-		BinaryTree<User> tree = new BinaryTree<User>(root);
+		BinaryTree<User> tree = new BinaryTree<User>();
 
 		Node<User> node2 = new Node<User>(user2);
 		Node<User> node3 = new Node<User>(user3);

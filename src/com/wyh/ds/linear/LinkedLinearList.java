@@ -71,7 +71,7 @@ public class LinkedLinearList<E> implements LinearList<E> {
         oldNode.next = newNode;
         size ++;
     }
-
+  
     @Override
     public void delete(int i) {
         Node<E> oldNode = node(i);

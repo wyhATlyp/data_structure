@@ -4,10 +4,12 @@ import com.wyh.ds.User;
 import com.wyh.ds.tree.TwoThreeTree;
 
 /**
- * 1.根结点达到三个数据时
- * 2.左子树达到三个数据：新数据分别放在左、中、右位置
- * @author mac008
- *
+ *	二三树测试场景：
+ *		1.根结点达到三个数据时
+ *		2.父结点为二结点、左子树达到三个数据时
+ *		3.父结点为三结点、左子树达到三个数据时
+ *		4.父结点为二结点、右子树达到三个数据时
+ *		5.父结点为三结点、右子树达到三个数据时
  */
 public class TwoTreeTreeTest {
 	
